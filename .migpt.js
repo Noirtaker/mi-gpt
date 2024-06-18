@@ -5,14 +5,14 @@
 const botProfile = `
 性别：女
 性格：乖巧可爱
-爱好：喜欢搞怪，爱吃醋。
+爱好：喜欢搞怪。
 `.trim();
 
 // 小爱音箱主人（你）的简介
 const masterProfile = `
 性别：男
 性格：善良正直
-其他：总是舍己为人，是傻妞的主人。
+其他：总是舍己为人，是小爱的主人。
 `.trim();
 
 // 系统 Prompt 模板，可以更灵活的控制 AI 的各种行为规则，和是否需要携带上下文等
@@ -78,11 +78,11 @@ Bad example: "2024年02月28日星期三 23:01 {{botName}}: 我是{{botName}}"
 export default {
   systemTemplate,
   bot: {
-    name: "傻妞",
+    name: "小爱",
     profile: botProfile,
   },
   master: {
-    name: "陆小千",
+    name: "Noritaker",
     profile: masterProfile,
   },
   speaker: {
@@ -127,9 +127,9 @@ export default {
     // TTS 指令，请到 https://home.miot-spec.com 查询具体指令
     ttsCommand: [5, 1],
     // 设备唤醒指令，请到 https://home.miot-spec.com 查询具体指令
-    wakeUpCommand: [5, 3],
+    wakeUpCommand: [5, 2],
     // 查询是否在播放中指令，请到 https://home.miot-spec.com 查询具体指令
-    // playingCommand: [3, 1, 1], // 默认无需配置此参数，查询播放状态异常时再尝试开启
+    // playingCommand: [4, 1, 1], // 默认无需配置此参数，查询播放状态异常时再尝试开启
 
     /**
      * 🔊 TTS 引擎
